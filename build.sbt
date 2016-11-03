@@ -13,7 +13,9 @@ lazy val root = (project in file(".")).
     name := "scalajs-daterange-bootstrap",
 	scalacOptions ++= Seq("-deprecation", "-feature"),
 	libraryDependencies += "org.scala-js" %%% "scalajs-dom" % "0.9.0",
-	libraryDependencies += "ru.pavkin" %%% "scala-js-momentjs" % "0.3.1",
 	libraryDependencies += "be.doeraene" %%% "scalajs-jquery" % "0.9.0",
-	jsDependencies += "org.webjars" % "bootstrap-daterangepicker" % "2.1.24" / "daterangepicker.js"	
+	libraryDependencies += "com.lihaoyi" %%% "utest" % "0.4.3" % "test",
+	libraryDependencies += "com.lihaoyi" %%% "scalatags" % "0.6.1" % "test",
+	testFrameworks += new TestFramework("utest.runner.Framework"),
+	jsDependencies += "org.webjars" % "bootstrap-daterangepicker" % "2.1.24" / "daterangepicker.js" % "provided"
   )
