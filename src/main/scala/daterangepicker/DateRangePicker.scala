@@ -1,4 +1,4 @@
-package com.izikovic.daterangepicker
+package daterangepicker
 
 import org.scalajs.dom
 import org.scalajs.jquery._
@@ -11,8 +11,6 @@ trait DateRangePicker extends js.Object {
 }
 
 object DateRangePicker {
-  import JQueryDateRangePicker._
-  
   def apply(element: dom.Element, options: js.UndefOr[js.Any], callback: js.UndefOr[js.Function3[MomentDate, MomentDate, String, Unit]]) = 
     jQuery(element).daterangepicker(options, callback)
 }

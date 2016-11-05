@@ -1,4 +1,4 @@
-package com.izikovic.daterangepicker
+package daterangepicker
 
 import utest._
 
