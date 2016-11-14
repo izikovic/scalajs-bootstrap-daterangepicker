@@ -9,8 +9,11 @@ import org.scalajs.dom
 object DateRangePickerTest extends TestSuite {
   val tests = this{
     "DateRangePicker should create a DRP component out of an input field" - {
+      val b = body()
+      
       val testinput = input(id := "component", `type` := "text").render
-      DateRangePicker(testinput, js.undefined, js.undefined)
+      b.render.appendChild(testinput)
+      DateRangePicker(testinput)
 
       dom.document.appendChild(testinput)
 
